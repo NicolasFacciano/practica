@@ -1,0 +1,28 @@
+import example.*
+
+describe "group of tests for mundial" {
+
+  test "partido" {
+    var x = new Jugador(monto=50, nombre="Ronaldo")
+    var y = new Jugador(monto=20, nombre="Cristiano")
+    var z = new Jugador(monto=2, nombre="Cavani")
+    var w = new Jugador(monto=1, nombre ="Borja")
+    var e = new Jugador(monto=3, nombre="Di Maria")
+    var f = new Jugador(monto=5, nombre ="Falcao")
+   var g = new Jugador(monto=5, nombre ="Messi")
+
+   var Boca = new EquipoConmebol(popularidad = 5,estiloHinchada="entusiasta")
+   var River = new EquipoConmebol(popularidad = 1,estiloHinchada="pecho frio")
+   var Racing = new EquipoConmebol(popularidad = 3,estiloHinchada="mercenaria")
+    Boca.listaJugadores().add(x)
+    Boca.listaJugadores().add(y)
+    River.listaJugadores().add(z)
+    River.listaJugadores().add(w)
+    Racing.listaJugadores().add(e)
+    Racing.listaJugadores().add(f)
+    Racing.listaJugadores().add(g)
+
+  var grupo1 = new Grupos(listaEquipos=[Boca,River,Racing])
+  grupo1.agregarPartido(Boca,River)
+  grupo1.agregarPartido(Boca,Racing)
+}
